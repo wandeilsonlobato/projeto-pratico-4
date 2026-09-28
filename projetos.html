@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Conheça os projetos sociais da ONG Semear Futuro e saiba como doar ou participar.">
+  <meta name="theme-color" content="#0b6e4f">
+  <title>Projetos | ONG Semear Futuro</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo.svg" alt="" width="40" height="40">
+        <span>Semear Futuro</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="menu-toggle__icon" aria-hidden="true"></span>
+        <span class="menu-toggle__label">Menu</span>
+      </button>
+      <nav class="site-nav" aria-label="Principal">
+        <ul id="menu-principal" class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+          <li><a href="cadastro.html">Seja voluntário</a></li>
+        </ul>
+      </nav>
+      <button class="contrast-toggle" type="button" aria-pressed="false">
+        <span aria-hidden="true">◐</span> Alto contraste
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <section class="page-header">
+      <div class="container">
+        <nav aria-label="Trilha de navegação" class="breadcrumb">
+          <ol>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+          </ol>
+        </nav>
+        <h1>Nossos projetos</h1>
+        <p class="lead">Cada projeto nasce da escuta da comunidade. Escolha como quer participar: doando, sendo voluntário ou divulgando.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="lista-projetos">
+      <div class="container">
+        <h2 id="lista-projetos" class="visually-hidden">Lista de projetos</h2>
+        <div class="grid grid--3">
+          <article class="card card--project">
+            <img src="assets/img/projeto-educacao.svg" alt="Ilustração de livros empilhados e um lápis" width="320" height="180" loading="lazy">
+            <h3>Reforço Escolar</h3>
+            <p>Aulas de português e matemática no contraturno para 400 crianças do ensino fundamental.</p>
+            <p class="tag">Educação</p>
+            <p>
+              <span id="meta-1">Meta de arrecadação: 72% atingida</span>
+              <progress value="72" max="100" aria-labelledby="meta-1">72%</progress>
+            </p>
+            <a class="btn btn--primary" href="cadastro.html">Apoiar o Reforço Escolar</a>
+          </article>
+
+          <article class="card card--project">
+            <img src="assets/img/projeto-alimentacao.svg" alt="Ilustração de um prato com arroz, feijão e salada" width="320" height="180" loading="lazy">
+            <h3>Prato Cheio</h3>
+            <p>Refeições diárias e cestas básicas mensais para famílias cadastradas no programa.</p>
+            <p class="tag">Segurança alimentar</p>
+            <p>
+              <span id="meta-2">Meta de arrecadação: 45% atingida</span>
+              <progress value="45" max="100" aria-labelledby="meta-2">45%</progress>
+            </p>
+            <a class="btn btn--primary" href="cadastro.html">Apoiar o Prato Cheio</a>
+          </article>
+
+          <article class="card card--project">
+            <img src="assets/img/projeto-cidadania.svg" alt="Ilustração de pessoas diversas de mãos dadas" width="320" height="180" loading="lazy">
+            <h3>Jovem Cidadão</h3>
+            <p>Oficinas de tecnologia, direitos e empreendedorismo para adolescentes de 14 a 18 anos.</p>
+            <p class="tag">Cidadania</p>
+            <p>
+              <span id="meta-3">Meta de arrecadação: 88% atingida</span>
+              <progress value="88" max="100" aria-labelledby="meta-3">88%</progress>
+            </p>
+            <a class="btn btn--primary" href="cadastro.html">Apoiar o Jovem Cidadão</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="como-ajudar">
+      <div class="container">
+        <h2 id="como-ajudar">Como ajudar</h2>
+        <details class="accordion">
+          <summary>Doação financeira</summary>
+          <p>Transferência via PIX para a chave <strong>doe@semearfuturo.org.br</strong>. Todas as doações recebem recibo para fins de declaração.</p>
+        </details>
+        <details class="accordion">
+          <summary>Voluntariado</summary>
+          <p>Preencha o <a href="cadastro.html">formulário de cadastro</a> informando sua área de interesse e disponibilidade.</p>
+        </details>
+        <details class="accordion">
+          <summary>Doação de materiais</summary>
+          <p>Aceitamos material escolar, alimentos não perecíveis e livros infantis em bom estado, de segunda a sexta, das 9h às 17h.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <section aria-labelledby="contato-titulo">
+        <h2 id="contato-titulo">Contato</h2>
+        <address>
+          Rua das Sementes, 120 – Jardim Esperança, São Paulo – SP<br>
+          Telefone: <a href="tel:+551130000000">(11) 3000-0000</a><br>
+          E-mail: <a href="mailto:contato@semearfuturo.org.br">contato@semearfuturo.org.br</a>
+        </address>
+      </section>
+      <p class="copyright"><small>&copy; 2026 ONG Semear Futuro. CNPJ 00.000.000/0001-00 (fictício).</small></p>
+    </div>
+  </footer>
+</body>
+</html>
