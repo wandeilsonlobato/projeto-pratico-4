@@ -3,6 +3,13 @@
 Todas as mudanças relevantes deste projeto são registradas aqui.
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e [SemVer](https://semver.org/lang/pt-BR/).
 
+## [1.0.1] — 2026-09-28
+
+### Corrigido
+- Telefone do rodapé com espaço e hífen não separáveis, evitando quebra de linha no meio do número.
+- `autocomplete="street-address"` (válido apenas em `textarea`) trocado por `address-line1` no campo de endereço.
+- Removido `role="list"` redundante da lista de indicadores de impacto.
+
 ## [1.0.0] — 2026-09-28
 
 ### Adicionado
