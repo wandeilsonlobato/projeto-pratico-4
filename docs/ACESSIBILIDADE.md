@@ -16,13 +16,18 @@ Este documento registra como o site atende a cada critério relevante da WCAG 2.
 
 ### Resultados das ferramentas
 
-Preencha após rodar as ferramentas sobre a versão publicada:
+Lighthouse 12 no site publicado (v1.0.1), em 28/09/2026:
 
-| Página | Lighthouse Acessibilidade | Lighthouse Performance | axe (problemas) |
-|---|---|---|---|
-| Início | | | |
-| Projetos | | | |
-| Cadastro | | | |
+| Página | Dispositivo | Acessibilidade | Performance | Boas práticas | SEO |
+|---|---|---|---|---|---|
+| Início | Celular | 100 | 88 | 100 | 100 |
+| Início | Desktop | 100 | 100 | 100 | 100 |
+| Projetos | Celular | 100 | 88 | 100 | 100 |
+| Projetos | Desktop | 100 | 100 | 100 | 100 |
+| Cadastro | Celular | 100 | 87 | 100 | 100 |
+| Cadastro | Desktop | 100 | 100 | 100 | 100 |
+
+A performance no celular foi reduzida por um *layout shift* (CLS 0,236) causado pelo menu. Após a correção (PR #6), o build medido localmente ficou com CLS 0 e performance de 96 a 100 no celular.
 
 ## 2. Critérios atendidos
 
@@ -94,6 +99,7 @@ Tamanho de alvo: botões, links do menu e opções do formulário têm no mínim
 |---|---|---|
 | Grupo de opções "Área de interesse" usava `role="radiogroup"` dentro de um `fieldset`, duplicando o agrupamento anunciado pelo leitor de tela | 4.1.2 | Removido o `role`; o `fieldset`/`legend` nativo já agrupa, e a mensagem de erro foi ligada ao `fieldset` por `aria-describedby`. |
 | Botões de opção sem `id`, o que impedia que o link do resumo de erros levasse o foco até eles | 2.4.3 / 3.3.1 | Adicionados `id` a cada opção; o link do resumo foca a primeira. |
+| Menu abria e fechava no carregamento em telas pequenas, deslocando o conteúdo (CLS 0,236 no Lighthouse) | 2.4.3 / desempenho | Remoção da classe `no-js` movida para um script inline no `<head>`, antes da primeira pintura (PR #6). |
 | Menu recolhido ficaria inacessível se o JavaScript falhasse | 2.1.1 | Classe `no-js` no `<html>`, removida pelo script; sem JS o menu permanece aberto. |
 
 Registre aqui os novos problemas encontrados pelo Lighthouse, pelo axe ou nos testes manuais, junto com o commit que os corrigiu.
