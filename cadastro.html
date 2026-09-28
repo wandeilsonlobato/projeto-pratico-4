@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cadastre-se como voluntário da ONG Semear Futuro.">
+  <meta name="theme-color" content="#0b6e4f">
+  <title>Seja voluntário | ONG Semear Futuro</title>
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/form.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/img/logo.svg" alt="" width="40" height="40">
+        <span>Semear Futuro</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="menu-toggle__icon" aria-hidden="true"></span>
+        <span class="menu-toggle__label">Menu</span>
+      </button>
+      <nav class="site-nav" aria-label="Principal">
+        <ul id="menu-principal" class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html" aria-current="page">Seja voluntário</a></li>
+        </ul>
+      </nav>
+      <button class="contrast-toggle" type="button" aria-pressed="false">
+        <span aria-hidden="true">◐</span> Alto contraste
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <section class="page-header">
+      <div class="container">
+        <nav aria-label="Trilha de navegação" class="breadcrumb">
+          <ol>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cadastro.html" aria-current="page">Seja voluntário</a></li>
+          </ol>
+        </nav>
+        <h1>Cadastro de voluntário</h1>
+        <p class="lead">Preencha o formulário e nossa equipe entrará em contato em até 5 dias úteis.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container container--narrow">
+        <div id="resumo-erros" class="alert alert--error" role="alert" tabindex="-1" hidden></div>
+        <div id="sucesso" class="alert alert--success" role="status" tabindex="-1" hidden></div>
+
+        <form id="form-cadastro" class="form" novalidate>
+          <p class="form-hint">Campos marcados com <span aria-hidden="true">*</span><span class="visually-hidden">asterisco</span> são obrigatórios.</p>
+
+          <fieldset>
+            <legend>Dados pessoais</legend>
+
+            <div class="field">
+              <label for="nome">Nome completo <span aria-hidden="true">*</span></label>
+              <input id="nome" name="nome" type="text" autocomplete="name" required minlength="3" aria-describedby="nome-erro">
+              <p id="nome-erro" class="field-error" hidden></p>
+            </div>
+
+            <div class="field">
+              <label for="email">E-mail <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-erro">
+              <p id="email-erro" class="field-error" hidden></p>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="cpf">CPF <span aria-hidden="true">*</span></label>
+                <input id="cpf" name="cpf" type="text" inputmode="numeric" required maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" aria-describedby="cpf-dica cpf-erro">
+                <p id="cpf-dica" class="field-hint">Formato: 000.000.000-00</p>
+                <p id="cpf-erro" class="field-error" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="nascimento">Data de nascimento <span aria-hidden="true">*</span></label>
+                <input id="nascimento" name="nascimento" type="date" autocomplete="bday" required aria-describedby="nascimento-erro">
+                <p id="nascimento-erro" class="field-error" hidden></p>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="telefone">Telefone <span aria-hidden="true">*</span></label>
+              <input id="telefone" name="telefone" type="tel" autocomplete="tel" inputmode="tel" required maxlength="15" pattern="\(\d{2}\) \d{4,5}-\d{4}" aria-describedby="telefone-dica telefone-erro">
+              <p id="telefone-dica" class="field-hint">Formato: (11) 91234-5678</p>
+              <p id="telefone-erro" class="field-error" hidden></p>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Endereço</legend>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="cep">CEP <span aria-hidden="true">*</span></label>
+                <input id="cep" name="cep" type="text" inputmode="numeric" autocomplete="postal-code" required maxlength="9" pattern="\d{5}-\d{3}" aria-describedby="cep-dica cep-erro">
+                <p id="cep-dica" class="field-hint">Formato: 00000-000</p>
+                <p id="cep-erro" class="field-error" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="estado">Estado <span aria-hidden="true">*</span></label>
+                <select id="estado" name="estado" autocomplete="address-level1" required aria-describedby="estado-erro">
+                  <option value="">Selecione</option>
+                  <option value="BA">Bahia</option>
+                  <option value="MG">Minas Gerais</option>
+                  <option value="PE">Pernambuco</option>
+                  <option value="PR">Paraná</option>
+                  <option value="RJ">Rio de Janeiro</option>
+                  <option value="RS">Rio Grande do Sul</option>
+                  <option value="SP">São Paulo</option>
+                </select>
+                <p id="estado-erro" class="field-error" hidden></p>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="cidade">Cidade <span aria-hidden="true">*</span></label>
+                <input id="cidade" name="cidade" type="text" autocomplete="address-level2" required aria-describedby="cidade-erro">
+                <p id="cidade-erro" class="field-error" hidden></p>
+              </div>
+
+              <div class="field">
+                <label for="endereco">Endereço <span aria-hidden="true">*</span></label>
+                <input id="endereco" name="endereco" type="text" autocomplete="street-address" required aria-describedby="endereco-erro">
+                <p id="endereco-erro" class="field-error" hidden></p>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset aria-describedby="interesse-erro">
+            <legend>Área de interesse <span aria-hidden="true">*</span></legend>
+            <div class="choices">
+              <label class="choice"><input id="interesse-educacao" type="radio" name="interesse" value="educacao" required> Educação</label>
+              <label class="choice"><input id="interesse-alimentacao" type="radio" name="interesse" value="alimentacao"> Alimentação</label>
+              <label class="choice"><input id="interesse-cidadania" type="radio" name="interesse" value="cidadania"> Cidadania</label>
+            </div>
+            <p id="interesse-erro" class="field-error" hidden></p>
+          </fieldset>
+
+          <div class="field">
+            <label for="mensagem">Conte um pouco sobre você (opcional)</label>
+            <textarea id="mensagem" name="mensagem" rows="4" maxlength="500" aria-describedby="mensagem-contador"></textarea>
+            <p id="mensagem-contador" class="field-hint">Até 500 caracteres.</p>
+          </div>
+
+          <div class="field">
+            <label class="choice">
+              <input id="termos" name="termos" type="checkbox" required aria-describedby="termos-erro">
+              Li e aceito a política de privacidade <span aria-hidden="true">*</span>
+            </label>
+            <p id="termos-erro" class="field-error" hidden></p>
+          </div>
+
+          <button class="btn btn--primary" type="submit">Enviar cadastro</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <section aria-labelledby="contato-titulo">
+        <h2 id="contato-titulo">Contato</h2>
+        <address>
+          Rua das Sementes, 120 – Jardim Esperança, São Paulo – SP<br>
+          Telefone: <a href="tel:+551130000000">(11) 3000-0000</a><br>
+          E-mail: <a href="mailto:contato@semearfuturo.org.br">contato@semearfuturo.org.br</a>
+        </address>
+      </section>
+      <p class="copyright"><small>&copy; 2026 ONG Semear Futuro. CNPJ 00.000.000/0001-00 (fictício).</small></p>
+    </div>
+  </footer>
+</body>
+</html>
