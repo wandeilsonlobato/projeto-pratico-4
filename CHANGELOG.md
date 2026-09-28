@@ -3,6 +3,15 @@
 Todas as mudanças relevantes deste projeto são registradas aqui.
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/) e [SemVer](https://semver.org/lang/pt-BR/).
 
+## [1.1.0] — 2026-09-28
+
+### Corrigido
+- Layout shift no carregamento em telas pequenas: o menu abria e fechava, deslocando o conteúdo (CLS 0,236 → 0). (#6)
+
+### Adicionado
+-  padronizando finais de linha em LF. (#5)
+- Resultados do Lighthouse no relatório de acessibilidade. (#7)
+
 ## [1.0.1] — 2026-09-28
 
 ### Corrigido
