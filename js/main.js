@@ -7,7 +7,6 @@
   'use strict';
 
   var root = document.documentElement;
-  root.classList.remove('no-js');
 
   var CHAVE_CONTRASTE = 'semear:contraste';
 
