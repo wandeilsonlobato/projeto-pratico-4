@@ -1,0 +1,10 @@
+# Normaliza os finais de linha no repositório (alinhado ao .editorconfig)
+* text=auto eol=lf
+
+# Arquivos binários
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.pdf binary
